@@ -6,8 +6,9 @@ function Search({handleFilter}) {
   
   function handleOnChange(e) {
     setSearchedName(e.target.value)
-    handleFilter(searchedName)
   }
+
+  handleFilter(searchedName)
 
   return (
     <div className="searchbar">

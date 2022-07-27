@@ -16,8 +16,6 @@ function App() {
     setPlants([...plants, newObj])
   }
 
-  
-
   const [searchedName, setSearchedName] = useState("")
 
   function handleNameChange(value) {
