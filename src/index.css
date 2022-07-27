@@ -71,6 +71,28 @@ main {
   width: 150px;
 }
 
+/* .edit-plant-form {
+  width: 200px;
+  padding: 1rem 1rem;
+  margin: 1rem;
+  background-color: rgba(192, 238, 211, 0.5);
+}
+
+.edit-plant-form form {
+  display: block;
+}
+
+.edit-plant-form input {
+  margin-bottom: 1rem;
+  margin-right: 2rem;
+  flex: 1;
+}
+
+.edit-plant-form button {
+  justify-content: center;
+  width: 150px;
+} */
+
 .searchbar {
   padding: 1rem;
   display: flex;

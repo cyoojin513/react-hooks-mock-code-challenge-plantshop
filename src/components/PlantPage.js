@@ -17,11 +17,16 @@ function PlantPage() {
     setPlants([...plants, newObj])
   }
 
+  function filterOutCard(objId) {
+    const updatedList = plants.filter((item) =>
+      item.id !== objId)
+    setPlants(updatedList)
+  }
+
   const [searchedName, setSearchedName] = useState("")
 
   function handleNameChange(value) {
     setSearchedName(value)
-    console.log(value)
   }
 
   const plantToDisplay = plants.filter((item) =>
@@ -30,9 +35,12 @@ function PlantPage() {
 
   return (
     <main>
-      <NewPlantForm renderNewPlant={renderNewPlant}/>
+      <NewPlantForm renderNewPlant={renderNewPlant} displayedPlants={plantToDisplay}/>
       <Search handleFilter={handleNameChange}/>
-      <PlantList plantsList={plantToDisplay}/>
+      <PlantList
+        plantsList={plantToDisplay}
+        deletingCard={filterOutCard}
+      />
     </main>
   );
 }
