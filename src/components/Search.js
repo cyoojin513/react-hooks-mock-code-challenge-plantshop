@@ -1,14 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 
 function Search({handleFilter}) {
-
-  const [searchedName, setSearchedName] = useState("")
-  
-  function handleOnChange(e) {
-    setSearchedName(e.target.value)
-  }
-
-  handleFilter(searchedName)
 
   return (
     <div className="searchbar">
@@ -17,8 +9,7 @@ function Search({handleFilter}) {
         type="text"
         id="search"
         placeholder="Type a name to search..."
-        value={searchedName}
-        onChange={handleOnChange}
+        onChange={(e) => handleFilter(e.target.value)}
       />
     </div>
   );
